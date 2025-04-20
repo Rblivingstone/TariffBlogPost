@@ -30,7 +30,7 @@ def estimate():
     result = model.fit()
     print(result.summary())
     plt.savefig('../output/figures/figure2.png')
-    plt.close()
+    plt.clf()
     #print(df['Tariff'].mean())
     return result.params['Tariff Discount'],-result.params['Tariff'],result.params['Tariff']-result.params['const']
 
